@@ -1,0 +1,13 @@
+[package]
+name = "ckb-vm-kcov-bug"
+version = "0.1.0"
+authors = ["Xuejie Xiao <xxuejie@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+bytes = "0.4.12"
+ckb-vm = { version = "0.13.0", features = ["asm"] }
+
+# If we comment those 2 lines, kcov would work perfectly
+[profile.release]
+debug = true
